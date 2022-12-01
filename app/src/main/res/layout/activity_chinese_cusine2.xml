@@ -8,30 +8,40 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="410dp"
-        android:layout_height="113dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025">
+        android:layout_width="414dp"
+        android:layout_height="603dp"
+        android:background="#E8DFD5"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="395dp"
-            android:layout_height="30dp"
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sriracha"
+            android:text="Chinese Restaurants"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#E81E46"
+            android:textSize="20sp" />
+
+        <ListView
+            android:id="@+id/chineselistview"
+            android:layout_width="match_parent"
+            android:entries="@array/chinese_restaurants"
+            android:layout_height="wrap_content" >
+
+        </ListView>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="301dp"
             android:layout_weight="1"
-            android:text="List of Chinese Restaurants" />
+            android:background="#00AF8686"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/ic_chinese_food" />
+
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/chineselistview"
-        android:layout_width="410dp"
-        android:layout_height="517dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

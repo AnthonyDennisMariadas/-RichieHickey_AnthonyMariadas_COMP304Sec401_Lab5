@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Defining a container for you List Item-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!-- Defining where should text be placed. You set you text color here-->
+    <TextView
+        android:id="@+id/list_content_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dip"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:text="sample"
+        android:textColor="#E81E46"
+        android:textSize="20dp" />
+</LinearLayout>

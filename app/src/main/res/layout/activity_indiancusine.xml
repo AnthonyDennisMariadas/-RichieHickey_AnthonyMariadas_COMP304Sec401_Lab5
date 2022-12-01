@@ -7,31 +7,34 @@
     tools:context=".IndianCusine">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="419dp"
-        android:layout_height="137dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E8DFD5"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/indianCuisineTV"
             android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:fontFamily="sans-serif"
-            android:text="List of Indian Restaurants" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sriracha"
+            android:text="Indian Restaurants"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#E81E46"
+            android:textSize="20sp"/>
 
-    <ListView
-        android:id="@+id/indianlistview"
-        android:layout_width="370dp"
-        android:layout_height="389dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        <ListView
+            android:id="@+id/indianLV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/indian_restaurants" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="372dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/italian_food_pic_foreground" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

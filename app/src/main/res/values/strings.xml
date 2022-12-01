@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string-array name="cuisine_types">
+        <item>Chinese</item>
+        <item>Indian</item>
+        <item>Italian</item>
+        <item>Greek</item>
+    </string-array>
+    <string-array name="chinese_restaurants">
+        <item>Lee Chen Asian Bistro</item>
+        <item>Mulan Chinese Cuisine</item>
+        <item>House of Gourmet</item>
+        <item>Hong Kong Gardens </item>
+    </string-array>
+
+    <string-array name="indian_restaurants">
+        <item>Banjara Indian Cuisine </item>
+        <item>Curry Twist Restaurant</item>
+        <item>Little India Restaurant</item>
+    </string-array>
+
+    <string-array name="italian_restaurants">
+        <item>Taverna Mercatto</item>
+        <item>Donatello Restaurant</item>
+        <item>Piano Piano Restaurant</item>
+        <item>Terroni</item>
+    </string-array>
+
+    <string-array name="greek_restaurants">
+        <item>Volos Greek Cuisine</item>
+        <item>Myth</item>
+        <item>Mezes</item>
+        <item>Pantheon Restaurant</item>
+    </string-array>
 </resources>

@@ -44,8 +44,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         LatLng restaurant = new LatLng(lat, lng);
         mMap.addMarker(new MarkerOptions().position(restaurant).title(titleOnMap));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(restaurant,20));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(restaurant,17));
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        mMap.setBuildingsEnabled(false);
+        mMap.getUiSettings().setTiltGesturesEnabled(true);
         mMap.getUiSettings().setZoomControlsEnabled(true);
 
 

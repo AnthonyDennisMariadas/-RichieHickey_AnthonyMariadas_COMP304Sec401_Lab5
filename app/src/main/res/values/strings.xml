@@ -10,7 +10,7 @@
         <item>Lee Chen Asian Bistro</item>
         <item>Mulan Chinese Cuisine</item>
         <item>House of Gourmet</item>
-        <item>Hong Kong Gardens </item>
+        <item>Hong Kong Gardens</item>
     </string-array>
 
     <string-array name="indian_restaurants">
@@ -32,4 +32,5 @@
         <item>Mezes</item>
         <item>Pantheon Restaurant</item>
     </string-array>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

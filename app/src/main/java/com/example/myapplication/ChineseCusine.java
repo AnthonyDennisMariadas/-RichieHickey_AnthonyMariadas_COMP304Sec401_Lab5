@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -60,17 +61,45 @@ public class ChineseCusine extends AppCompatActivity {
                 new String[] {"Restaurant","Address"},
                 new int[] {R.id.tv1,R.id.tv2});
         listview2.setAdapter(adapter);
-/*
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter(this,R.layout.list_content,R.id.list_content_tv,chineseList);
-        listview2.setAdapter(arrayAdapter);
-        
+
         listview2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                
+                String s = chineseList.get(i);
+                switch(s)
+                {
+                    case "Lee Chen Asian Bistro":
+                        Intent intent1 = new Intent(ChineseCusine.this,MapsActivity.class);
+                        intent1.putExtra("lat",43.6723835);
+                        intent1.putExtra("lng",-79.3874595);
+                        intent1.putExtra("title","Lee Chen Asian Bistro");
+                        startActivity(intent1);
+                        break;
+                    case "Mulan Chinese Cuisine":
+                        Intent intent2 = new Intent(ChineseCusine.this,MapsActivity.class);
+                        intent2.putExtra("lat",43.7141178);
+                        intent2.putExtra("lng",-79.3339457);
+                        intent2.putExtra("title","Mulan Chinese Cuisine");
+                        startActivity(intent2);
+                        break;
+
+                    case "House of Gourmet":
+                        Intent intent3 = new Intent(ChineseCusine.this,MapsActivity.class);
+                        intent3.putExtra("lat",43.6532071);
+                        intent3.putExtra("lng",-79.3973086);
+                        intent3.putExtra("title","House of Gourmet");
+                        startActivity(intent3);
+                        break;
+
+                    case "Hong Kong Gardens":
+                        Intent intent4 = new Intent(ChineseCusine.this,MapsActivity.class);
+                        intent4.putExtra("lat",43.647535);
+                        intent4.putExtra("lng",-79.5099386);
+                        intent4.putExtra("title","Hong Kong Gardens");
+                        startActivity(intent4);
+                        break;
+                }
             }
         });
-
- */
     }
 }

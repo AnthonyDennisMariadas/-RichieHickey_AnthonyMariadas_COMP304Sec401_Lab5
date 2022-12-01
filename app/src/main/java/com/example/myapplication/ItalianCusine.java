@@ -2,7 +2,10 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -55,5 +58,46 @@ public class ItalianCusine extends AppCompatActivity {
                 new String[] {"Restaurant","Address"},
                 new int[] {R.id.tv1,R.id.tv2});
         listview3.setAdapter(adapter);
+
+        listview3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String s = italianList.get(i);
+
+                switch (s)
+                {
+                    case "Taverna Mercatto":
+                        Intent intent1 = new Intent(ItalianCusine.this,MapsActivity.class);
+                        intent1.putExtra("lat",43.6431197);
+                        intent1.putExtra("lng",-79.3830406);
+                        intent1.putExtra("title","Taverna Mercatto");
+                        startActivity(intent1);
+                        break;
+                    case "Donatello Restaurant":
+                        Intent intent2 = new Intent(ItalianCusine.this,MapsActivity.class);
+                        intent2.putExtra("lat",43.6573448);
+                        intent2.putExtra("lng",-79.3835733);
+                        intent2.putExtra("title","Donatello Restaurant");
+                        startActivity(intent2);
+                        break;
+
+                    case "Piano Piano Restaurant":
+                        Intent intent3 = new Intent(ItalianCusine.this,MapsActivity.class);
+                        intent3.putExtra("lat",43.6630374);
+                        intent3.putExtra("lng",-79.4029297);
+                        intent3.putExtra("title","Piano Piano Restaurant");
+                        startActivity(intent3);
+                        break;
+
+                    case "Terroni":
+                        Intent intent4 = new Intent(ItalianCusine.this,MapsActivity.class);
+                        intent4.putExtra("lat",43.6509141);
+                        intent4.putExtra("lng",-79.375752);
+                        intent4.putExtra("title","Terroni");
+                        startActivity(intent4);
+                        break;
+                }
+            }
+        });
     }
 }
